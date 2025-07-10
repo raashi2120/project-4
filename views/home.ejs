@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body class="flex flex-col h-screen">
+    <div class="header ">
+        <nav id="firstNav" class="bg-purple-300 flex justify-between pt-2 pb-2 pr-50 pl-50">
+            <div id="logo">LOGO</div>
+            <i class="fa-solid fa-cart-shopping  w-5 "></i>
+
+
+        </nav>
+        <nav id="secondNav" class="bg-purple-200 ">
+            <ul class="flex justify-center text-center font-light m-2">
+                <li class="basis-40"><a href="#">MAKEUP</a></li>
+                <li class="basis-40"><a href="#">SKIN</a></li>
+                <li class="basis-40"><a href="#">HAIR</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+    <div class="featured-card flex flex-grow">
+        <div id="p1" class="group relative h-full basis-1/3 hover: cursor-pointer">
+            <img class="h-full w-full object-cover " src="<%=makeup[0].image%>" alt="">
+            <div
+                class="absolute inset-0 opacity-0 backdrop-blur-sm transition  delay-150 duration-100  group-hover:opacity-100   ">
+            </div>
+
+        </div>
+        <div id="p2" class="group relative h-full basis-1/3 hover: cursor-pointer">
+            <img class="h-full w-full object-cover" src="<%=skin[0].image%>" alt="">
+            <div
+                class="absolute inset-0 opacity-0 backdrop-blur-sm transition  delay-150 duration-100  group-hover:opacity-100   ">
+            </div>
+        </div>
+        <div id="p3" class="group relative h-full basis-1/3 hover: cursor-pointer">
+            <img class="h-full w-full object-cover" src="<%=hair[0].image%>" alt="">
+            <div
+                class="absolute inset-0 opacity-0 backdrop-blur-sm transition  delay-150 duration-100  group-hover:opacity-100   ">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer bg-purple-200  bottom-0 w-full ">
+        <ul class="text-sm  font-light mt-3 mb-3  flex justify-center">
+            <li class=" mr-2 ml-2">Terms & Conditions</li>
+            <li class=" mr-2 ml-2">Shipping policy</li>
+            <li class=" mr-2 ml-2">Cancellation policy</li>
+            <li class=" mr-2 ml-2">Privacy policy</li>
+        </ul>
+        <ul class="text-sm font-light p-3 text-center">
+            <li>© 2025 ----- E-RETAIL LIMITED All Rights Reserved</li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+
+</html>

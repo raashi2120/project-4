@@ -1,0 +1,152 @@
+{
+    "makeup": [
+        {
+            "id": 1,
+            "name": "Velvet Matte Lipstick",
+            "description": "Smooth, long-lasting lipstick with a velvet matte finish.",
+            "price": 499,
+            "image": "images/MatteLipstick.jpg",
+            "category": "makeup"
+        },
+        {
+            "id": 2,
+            "name": "Liquid Foundation",
+            "description": "Full coverage foundation that blends flawlessly.",
+            "price": 799,
+            "image": "https://via.placeholder.com/200x200?text=Foundation",
+            "category": "makeup"
+        },
+        {
+            "id": 3,
+            "name": "Waterproof Mascara",
+            "description": "Lengthens and volumizes lashes for an all-day bold look.",
+            "price": 599,
+            "image": "https://via.placeholder.com/200x200?text=Mascara",
+            "category": "makeup"
+        },
+        {
+            "id": 4,
+            "name": "Eyeshadow Palette",
+            "description": "12 highly pigmented shades in one travel-friendly palette.",
+            "price": 999,
+            "image": "https://via.placeholder.com/200x200?text=Eyeshadow",
+            "category": "makeup"
+        },
+        {
+            "id": 5,
+            "name": "Blush Duo",
+            "description": "Buildable blush duo for a natural rosy glow.",
+            "price": 549,
+            "image": "https://via.placeholder.com/200x200?text=Blush",
+            "category": "makeup"
+        },
+        {
+            "id": 6,
+            "name": "Matte Setting Spray",
+            "description": "Lock your makeup in place with our shine-free mist.",
+            "price": 399,
+            "image": "https://via.placeholder.com/200x200?text=Setting+Spray",
+            "category": "makeup"
+        }
+    ],
+    "skin": [
+        {
+            "id": 7,
+            "name": "Hydrating Cleanser",
+            "description": "Gentle, non-stripping face wash for daily use.",
+            "price": 349,
+            "image": "images/HydratingCleanser.jpg",
+            "category": "skin"
+        },
+        {
+            "id": 8,
+            "name": "Vitamin C Serum",
+            "description": "Brightens skin and reduces dark spots.",
+            "price": 899,
+            "image": "https://via.placeholder.com/200x200?text=Serum",
+            "category": "skin"
+        },
+        {
+            "id": 9,
+            "name": "Daily Moisturizer SPF 30",
+            "description": "Lightweight moisturizer with sun protection.",
+            "price": 499,
+            "image": "https://via.placeholder.com/200x200?text=Moisturizer",
+            "category": "skin"
+        },
+        {
+            "id": 10,
+            "name": "Clay Mask",
+            "description": "Deep cleansing clay mask for oily skin types.",
+            "price": 299,
+            "image": "https://via.placeholder.com/200x200?text=Clay+Mask",
+            "category": "skin"
+        },
+        {
+            "id": 11,
+            "name": "Under Eye Cream",
+            "description": "Reduces puffiness and dark circles.",
+            "price": 379,
+            "image": "https://via.placeholder.com/200x200?text=Eye+Cream",
+            "category": "skin"
+        },
+        {
+            "id": 12,
+            "name": "Night Repair Cream",
+            "description": "Nourishes and repairs skin overnight.",
+            "price": 649,
+            "image": "https://via.placeholder.com/200x200?text=Night+Cream",
+            "category": "skin"
+        }
+    ],
+    "hair": [
+        {
+            "id": 13,
+            "name": "Argan Oil Shampoo",
+            "description": "Hydrating shampoo with natural argan oil.",
+            "price": 499,
+            "image": "images/ArganOil.jpg",
+            "category": "hair"
+        },
+        {
+            "id": 14,
+            "name": "Keratin Conditioner",
+            "description": "Smoothes frizz and strengthens strands.",
+            "price": 549,
+            "image": "https://via.placeholder.com/200x200?text=Conditioner",
+            "category": "hair"
+        },
+        {
+            "id": 15,
+            "name": "Hair Growth Serum",
+            "description": "Promotes hair growth and reduces hair fall.",
+            "price": 799,
+            "image": "https://via.placeholder.com/200x200?text=Growth+Serum",
+            "category": "hair"
+        },
+        {
+            "id": 16,
+            "name": "Dry Shampoo",
+            "description": "Instantly refreshes hair without water.",
+            "price": 349,
+            "image": "https://via.placeholder.com/200x200?text=Dry+Shampoo",
+            "category": "hair"
+        },
+        {
+            "id": 17,
+            "name": "Hair Mask",
+            "description": "Deep conditioning mask for damaged hair.",
+            "price": 599,
+            "image": "https://via.placeholder.com/200x200?text=Hair+Mask",
+            "category": "hair"
+        },
+        {
+            "id": 18,
+            "name": "Leave-In Conditioner",
+            "description": "Hydrates and detangles hair instantly.",
+            "price": 429,
+            "image": "https://via.placeholder.com/200x200?text=Leave-In",
+            "category": "hair"
+        }
+    ]
+}
