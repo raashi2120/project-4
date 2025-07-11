@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= product.name %>
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="/output.css" rel="stylesheet" />
+
+</head>
+
+<body class="h-screen">
+    <nav id="firstNav" class="bg-purple-300 flex justify-between pt-2 pb-2 pr-50 pl-50">
+        <div id="logo">LOGO</div>
+        <a href="/cart" class="hover:cursor-pointer"><i class="fa-solid fa-cart-shopping  w-5 "></i></a>
+
+
+    </nav>
+    <div class="flex m-5 h-4/5 w-full gap-8">
+        <img src="<%= product.image %>" alt="" class="w-1/2 h-full" />
+        <div class="flex flex-col items-start w-1/2 p-5 h-full gap-5">
+            <h1 class="text-5xl font-bold">
+                <%= product.name %>
+            </h1>
+            <p class="items-baseline">5/5<i class="fa-solid fa-star mr-5"></i><a>Rate this product</a></p>
+
+            <p class="text-gray-800">Price: ₹<%= product.price %>
+            </p>
+            <p>
+                <%= product.description %>
+            </p>
+
+            <div class="flex gap-5">
+                <button class="border border-neutral-300 pt-5 pb-5 pl-8 pr-8"><i class="fa-solid fa-circle-check"></i>
+                    Authentic
+                    Products</button>
+                <button class="border border-neutral-300 pt-5 pb-5 pl-8 pr-8"><i
+                        class="fa-solid fa-face-smile-wink"></i> Easy
+                    Returns</button>
+            </div>
+
+            <button onclick="addToCart('<%= product.id %>')"
+                class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 hover:cursor-pointer">
+                Add to Cart
+            </button>
+
+
+        </div>
+
+    </div>
+    <script src="/cart.js" defer></script>
+</body>
+
+</html>

@@ -13,8 +13,8 @@
 <body class="flex flex-col h-screen">
     <div class="header ">
         <nav id="firstNav" class="bg-purple-300 flex justify-between pt-2 pb-2 pr-50 pl-50">
-            <div id="logo">LOGO</div>
-            <i class="fa-solid fa-cart-shopping  w-5 "></i>
+            <div id="logo">Logo</div>
+            <a href="/cart" class="hover:cursor-pointer"><i class="fa-solid fa-cart-shopping  w-5 "></i></a>
 
 
         </nav>
@@ -34,8 +34,8 @@
             <img class="h-full w-full object-cover " src="<%=makeup[0].image%>" alt="">
             <div
                 class="flex justify-center items-center absolute inset-0 opacity-0 backdrop-blur-sm transition  duration-100  group-hover:opacity-100   ">
-                <button
-                    class="border border-white text-white pt-3 pb-3 pr-5 pl-5  hover:bg-white  hover:text-black">BUY</button>
+                <button class="border border-white text-white pt-3 pb-3 pr-5 pl-5  hover:bg-white  hover:text-black">
+                    <a href="/product/<%=makeup[0].id%>">BUY</a></button>
             </div>
 
         </div>
@@ -43,16 +43,16 @@
             <img class="h-full w-full object-cover" src="<%=skin[0].image%>" alt="">
             <div
                 class="flex justify-center items-center absolute inset-0 opacity-0 backdrop-blur-sm transition  duration-100  group-hover:opacity-100   ">
-                <button
-                    class="border border-white text-white pt-3 pb-3 pr-5 pl-5 hover:bg-white  hover:text-black">BUY</button>
+                <button class="border border-white text-white pt-3 pb-3 pr-5 pl-5 hover:bg-white  hover:text-black">
+                    <a href="/product/<%=skin[0].id%>">BUY</a></button>
             </div>
         </div>
         <div id="p3" class=" group relative h-full basis-1/3 hover: cursor-pointer">
             <img class="h-full w-full object-cover" src="<%=hair[0].image%>" alt="">
             <div
                 class="flex justify-center items-center absolute inset-0 opacity-0 backdrop-blur-sm transition duration-100 group-hover:opacity-100 ">
-                <button
-                    class="border border-white text-white pt-3 pb-3 pr-5 pl-5  hover:bg-white  hover:text-black">BUY</button>
+                <button class="border border-white text-white pt-3 pb-3 pr-5 pl-5  hover:bg-white  hover:text-black">
+                    <a href="/product/<%=hair[0].id%>">BUY</a></button>
             </div>
         </div>
     </div>
