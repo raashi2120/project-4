@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="/output.css" rel="stylesheet">
+    <title>Your cart</title>
+</head>
+<body class="h-screen">
+    <nav class="bg-purple-300 flex  pt-2 pb-2 pr-50 pl-50">
+        <div id=" logo" class="basis-1/2">LOGO</div>
+        <ul class="flex basis-1/2 justify-end gap-15">
+            <li class="hover:cursor-pointer"><a href="/"><i class="fa-solid fa-house"></a></i></li>
+            <li class=" "><i class="fa-solid fa-cart-shopping  w-5 "></i></li>
+
+        </ul>
+    </nav>
+
+    <h1 class="text-2xl font-bold m-4">Your Cart</h1>
+<button onclick="clearCart()" class="ml-4 mb-4 bg-red-500 text-white px-3 py-1 rounded">Clear Cart</button>
+
+<div id="cart-container" class="p-6 grid gap-4"></div>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || {};
+  const allProducts = JSON.parse('<%- JSON.stringify(data) %>');
+
+  const cartContainer = document.getElementById("cart-container");
+
+  for (let id in cart) {
+    let product = null;
+    for (let category in allProducts) {
+        product = allProducts[category].find(p => p.id == id);
+        if (product) break;
+    }
+
+    if (product) {
+      const quantity = cart[id].quantity;
+      const div = document.createElement("div");
+      div.className = "border p-4 rounded shadow";
+
+      div.innerHTML = `
+        <h2 class="text-lg font-bold">${product.name}</h2>
+        <p>Price: ₹${product.price}</p>
+        <p>Quantity:
+          <button onclick="updateCart(${product.id}, -1)" class="px-2 bg-gray-300 rounded">-</button>
+          <span id="qty-${product.id}">${quantity}</span>
+          <button onclick="updateCart(${product.id}, 1)" class="px-2 bg-gray-300 rounded">+</button>
+        </p>
+        <p>Total: ₹<span id="total-${product.id}">${product.price * quantity}</span></p>
+        <button onclick="removeFromCart(${product.id})" class="mt-2 bg-red-600 text-white px-2 py-1 rounded">Remove</button>
+      `;
+      cartContainer.appendChild(div);
+    }
+  }
+</script>
+<script src="/cart.js" defer></script>
+
+
+    
+</body>
+</html>
