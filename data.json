@@ -135,9 +135,9 @@
         {
             "id": 17,
             "name": "Hair Mask",
-            "description": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=1053&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "softens hair ",
             "price": 599,
-            "image": "",
+            "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=1053&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "category": "hair"
         },
         {
@@ -145,7 +145,7 @@
             "name": "Leave-In Conditioner",
             "description": "Hydrates and detangles hair instantly.",
             "price": 429,
-            "image": "https://via.placeholder.com/200x200?text=Leave-In",
+            "image": "https://images.unsplash.com/photo-1701992679320-7f3dbb8090d3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhaXIlMjBjb25kaXRpb25lciUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
             "category": "hair"
         }
     ]
