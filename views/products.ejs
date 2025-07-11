@@ -15,15 +15,12 @@
 
 </head>
 
-<body class="min-h-screen">
- 
-  <nav class="bg-purple-300 flex pt-2 pb-2 pr-10 pl-10 items-center justify-between">
-    <div id="logo" class="text-xl font-bold">LOGO</div>
-    <ul class="flex gap-8 items-center">
-      <li><a href="/" class="hover:underline"><i class="fa-solid fa-house"></i></a></li>
-      <li><a href="/cart" class="hover:underline"><i class="fa-solid fa-cart-shopping"></i></a></li>
-    </ul>
-  </nav>
+<body class="h-screen">
+    <nav class="bg-purple-300 flex  pt-2 pb-2 pr-50 pl-50">
+        <div id=" logo" class="basis-1/2">LOGO</div>
+        <ul class="flex basis-1/2 justify-end gap-15">
+            <li class="hover:cursor-pointer"><a href="/"><i class="fa-solid fa-house"></a></i></li>
+            <li class=" "><a href="/cart"><i class="fa-solid fa-cart-shopping  w-5 "></a></i></li>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-4">
     <% for(let i = 0; i < product.length; i++) { %>
@@ -32,29 +29,37 @@
         <div class="h-3/4 relative group">
           <img class="h-full w-full object-cover" src="<%= product[i].image %>" alt="<%= product[i].name %>">
 
-          <div
-            class="flex justify-center items-center absolute inset-0 backdrop-blur-sm opacity-0 transition duration-200 group-hover:opacity-100">
-            <a
-              href="/product/<%= product[i].id %>"
-              class="view border border-white text-white p-2 hover:bg-white hover:text-black">
-              VIEW
-            </a>
-          </div>
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-2">
+        <% for(let i=0;i<product.length;i++){%>
+            <div class="flex flex-col h-96 gap-2  ">
+                <div class="h-3/4 relative group">
+                    <img class="h-full w-full object-cover" src="<%= product[i].image %>">
 
-        <!-- DETAILS SECTION -->
-        <div class="details h-1/4 flex flex-col justify-center items-center gap-1">
-          <h1 class="text-center text-lg font-semibold"><%= product[i].name %></h1>
-          <h2 class="text-center text-gray-600">₹<%= product[i].price %></h2>
-          <button
-            onclick="addToCart('<%= product[i].id %>')"
-            class="mt-2 pt-2 pb-2 pl-4 pr-4 border border-purple-500 text-purple-700 hover:bg-purple-500 hover:text-white rounded">
-            ADD
-          </button>
-        </div>
-      </div>
-    <% } %>
-  </div>
+                    <div
+                        class="flex justify-center items-center absolute inset-0 backdrop-blur-sm opacity-0 transition duration-200 group-hover:opacity-100">
+                        <button
+                            class="view border border-white text-white p-2 hover:bg-white hover:text-black hover:cursor-pointer">
+                            <a href="/product/<%= product[i].id %>"> VIEW </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="details h-1/4 flex flex-col justify-center items-center">
+                    <h1 class="text-center">
+                        <%= product[i].name %>
+                    </h1>
+                    <h2 class="text-center">
+                        <%= product[i].price %>
+                    </h2>
+                    <button onclick="addToCart('<%= product[i].id %>')"
+                        class="m-2 pt-2 pb-2 pl-4 pr-4  border border-purple-200 text-center  hover:bg-purple-200 hover:text-white hover:cursor-pointer">ADD</button>
+
+                </div>
+            </div>
+            <%} %>
+    </div>
+
+    <script src="/cart.js" defer></script>
+
 
   <script src="/cart.js" defer></script>
 </body>
