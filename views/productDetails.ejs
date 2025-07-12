@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="/output.css" rel="stylesheet" />
 
+    <style>
+        #imageZoom::after {
+            display: var(--display);
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            background-image: var(--url);
+            background-size: 200%;
+            background-position: var(--zoom-x) var(--zoom-y);
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+    </style>
+
 </head>
 
 <body class="h-screen">
@@ -20,8 +37,15 @@
 
 
     </nav>
+
+
     <div class="flex m-5 h-4/5 w-full gap-8">
-        <img src="<%= product.image %>" alt="" class="w-1/2 h-full" />
+        <div id="imageZoom" class="w-1/2 h-full relative" style="--url: url(<%= product.image %>);
+         --zoom-x:0%; --zoom-y:0%;
+         --display: none;
+        ">
+            <img src="<%= product.image %>" alt="" class="w-full h-full object-cover" />
+        </div>
         <div class="flex flex-col items-start w-1/2 p-5 h-full gap-5">
             <h1 class="text-5xl font-bold">
                 <%= product.name %>
@@ -52,7 +76,9 @@
         </div>
 
     </div>
+    <script src="/zoom.js" defer></script>
     <script src="/cart.js" defer></script>
+
 </body>
 
 </html>
