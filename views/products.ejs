@@ -2,17 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <link href="/output.css" rel="stylesheet" />
-  <title>Our Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="/output.css" rel="stylesheet">
 
-
-
+    <title>
+        <%=product[0].category%>
+    </title>
 </head>
 
 <body class="h-screen">
@@ -22,12 +19,8 @@
             <li class="hover:cursor-pointer"><a href="/"><i class="fa-solid fa-house"></a></i></li>
             <li class=" "><a href="/cart"><i class="fa-solid fa-cart-shopping  w-5 "></a></i></li>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-4">
-    <% for(let i = 0; i < product.length; i++) { %>
-      <div class="flex flex-col h-96 gap-2 border rounded-lg overflow-hidden shadow">
-        <!-- IMAGE SECTION -->
-        <div class="h-3/4 relative group">
-          <img class="h-full w-full object-cover" src="<%= product[i].image %>" alt="<%= product[i].name %>">
+        </ul>
+    </nav>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-2">
         <% for(let i=0;i<product.length;i++){%>
@@ -61,7 +54,6 @@
     <script src="/cart.js" defer></script>
 
 
-  <script src="/cart.js" defer></script>
 </body>
 
 </html>
