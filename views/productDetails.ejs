@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="/output.css" rel="stylesheet" />
 
+
     <style>
         #imageZoom::after {
             display: var(--display);
@@ -43,6 +44,7 @@
             #imageZoom {
                 width: 100%;
                 height: 50%;
+
             }
 
             h1 {
@@ -69,10 +71,10 @@
 
 </head>
 
-<body class="min-h-screen w-screen">
-    <nav class="bg-purple-300 flex  pt-2 pb-2 pr-50 pl-50">
+<body class="min-h-screen">
+    <nav class="bg-purple-300 flex justify-between pt-2 pb-2 pr-50 pl-50">
         <div id=" logo" class="basis-1/2">LOGO</div>
-        <ul class="flex basis-1/2 justify-end gap-15">
+        <ul class="flex basis-1/2 justify-end  gap-15">
             <li class="hover:cursor-pointer"><a href="/"><i class="fa-solid fa-house"></a></i></li>
             <li class=" "><a href="/cart"><i class="fa-solid fa-cart-shopping  w-5 "></a></i></li>
 
@@ -80,14 +82,17 @@
     </nav>
 
 
-    <div class=" flex flex-row m-5 h-screen  gap-8 relative hover:cursor-zoom-in">
+    <div class="container flex flex-row  h-screen p-5 gap-8 relative ">
         <div id="imageZoom" class="w-1/2 h-4/5  relative" style="--url: url(<%= product.image %>);
          --zoom-x:0%; --zoom-y:0%;
          --display: none;
         ">
+
             <img src="<%= product.image %>" alt="" class="w-full h-full object-cover " />
         </div>
-        <div class="details flex flex-col items-start w-1/2 p-5 h-full gap-5">
+
+
+        <div class="details flex flex-col  items-start w-1/2 p-5 h-full gap-5">
             <h1 class="text-5xl font-bold w-full">
                 <%= product.name %>
             </h1>
@@ -99,12 +104,13 @@
                 <%= product.description %>
             </p>
 
-            <div class="flex gap-5">
+            <div class="flex gap-5 w-full">
                 <button class="border border-neutral-300 pt-5 pb-5 pl-8 pr-8"><i class="fa-solid fa-circle-check"></i>
                     Authentic
                     Products</button>
                 <button class="border border-neutral-300 pt-5 pb-5 pl-8 pr-8"><i
-                        class="fa-solid fa-face-smile-wink"></i> Easy
+                        class="fa-solid fa-face-smile-wink"></i>
+                    Easy
                     Returns</button>
             </div>
 
