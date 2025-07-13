@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="/output.css" rel="stylesheet">
     <title>Your cart</title>
+    <style>
+        @media screen and (max-width:768px) {
+            nav {
+                padding-left: 40px;
+                padding-right: 40px;
+
+            }
+
+            .image {
+                width: 50%;
+            }
+        }
+    </style>
 </head>
 
 <body class="h-screen">
@@ -58,7 +71,7 @@
         <p>Total: ₹<span id="total-${product.id}">${product.price * quantity}</span></p>
         <button onclick="removeFromCart(${product.id})" class="mt-2 bg-red-600 text-white px-2 py-1 rounded">Remove</button>
         </div>
-        <div class="h-full w-xs"> <img class="h-full w-full" src=${product.image}>
+        <div class="image h-full w-xs"> <img class="h-full w-full" src=${product.image}>
             </div>
       `;
                 cartContainer.appendChild(div);
