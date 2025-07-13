@@ -15,6 +15,68 @@ A fully responsive, interactive product detail page built with **Node.js**, **Ex
 
 <h2>Project Structure</h2>
 
+```
+.
+├── data.json
+├── index.js
+├── package-lock.json
+├── package.json
+├── public
+│   ├── cart.js
+│   ├── logo
+│   ├── output.css
+│   └── zoom.js
+├── src
+│   ├── input.css
+│   └── output.css
+├── tailwind.config.js
+└── views
+    ├── cart.ejs
+    ├── home.ejs
+    ├── productDetails.ejs
+    ├── products.ejs
+    └── script.js
+
+```
+
+<h2>Tech Stack</h2>
+<table>
+<tr> 
+ <th>Layer</th>           
+ <th>Tech</th>    
+</tr>
+
+<tr>
+ <td>Frontend</td>     
+ <td>HTML, Tailwind CSS, Font Awesome </td>
+</tr>  
+
+<tr>
+ <td> Templating</td>     
+ <td>EJS </td>
+</tr>  
+
+<tr>
+ <td> Backend  </td>     
+ <td> Node.js, Express.js</td>
+</tr>
+
+<tr>
+  <td>Interactivity</td>
+  <td> Vanilla JavaScript (zoom/cart)</td>
+</tr>
+
+<tr>
+  <td>Build Tool </td>
+  <td>Tailwind CLI or PostCSS  </td>
+</tr>
+</table>
+
+<h2>Local Development Setup</h2>
+
+<h3>1. Clone the Repository</h3>
+
+
 
 
 
