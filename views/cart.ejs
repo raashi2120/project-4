@@ -2,64 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="/output.css" rel="stylesheet">
-    <title>Your cart</title>
-    <style>
-        @media screen and (max-width:768px) {
-            nav {
-                padding-left: 40px;
-                padding-right: 40px;
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="/output.css" rel="stylesheet">
+  <title>Your cart</title>
+  <style>
+    @media screen and (max-width:768px) {
+      nav {
+        padding-left: 40px;
+        padding-right: 40px;
 
-            }
+      }
 
-            .image {
-                width: 50%;
-            }
-        }
-    </style>
+      .image {
+        width: 50%;
+      }
+    }
+  </style>
 </head>
 
 <body class="h-screen">
-    <nav class="bg-purple-300 flex  pt-2 pb-2 pr-50 pl-50">
-        <div id=" logo" class="basis-1/2">LOGO</div>
-        <ul class="flex basis-1/2 justify-end ">
-            <li class="hover:cursor-pointer"><a href="/"><i class="fa-solid fa-house"></a></i></li>
+  <nav class="bg-purple-300 flex  pt-2 pb-2 pr-50 pl-50">
+    <div id=" logo" class="basis-1/2">LOGO</div>
+    <ul class="flex basis-1/2 justify-end ">
+      <li class="hover:cursor-pointer"><a href="/"><i class="fa-solid fa-house"></a></i></li>
 
 
-        </ul>
-    </nav>
+    </ul>
+  </nav>
 
-    <h1 class="text-2xl font-bold m-4">Your Cart</h1>
-    <button onclick="clearCart()" class="ml-4 mb-4 bg-red-500 text-white px-3 py-1 rounded">Clear Cart</button>
+  <h1 class="text-2xl font-bold m-4">Your Cart</h1>
+  <button onclick="clearCart()" class="ml-4 mb-4 bg-red-500 text-white px-3 py-1 rounded">Clear Cart</button>
 
-    <div id="cart-container" class="p-6 grid gap-4"></div>
+  <div id="cart-container" class="p-6 grid gap-4"></div>
 
-    <script>
-        const cart = JSON.parse(localStorage.getItem("cart")) || {};
-        const allProducts = JSON.parse('<%- JSON.stringify(data) %>');
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || {};
+    const allProducts = JSON.parse('<%- JSON.stringify(data) %>');
 
-        const cartContainer = document.getElementById("cart-container");
+    const cartContainer = document.getElementById("cart-container");
 
-        let totalAmount = 0;
+    let totalAmount = 0;
 
-        for (let id in cart) {
-            let product = null;
-            for (let category in allProducts) {
-                product = allProducts[category].find(p => p.id == id);
-                if (product) break;
-            }
+    for (let id in cart) {
+      let product = null;
+      for (let category in allProducts) {
+        product = allProducts[category].find(p => p.id == id);
+        if (product) break;
+      }
 
-            if (product) {
-                const quantity = cart[id].quantity;
-                totalAmount += product.price * quantity;
-                const div = document.createElement("div");
-                div.className = "flex justify-between p-4 h-64 w-full rounded shadow hover:border hover:border-purple-300";
+      if (product) {
+        const quantity = cart[id].quantity;
+        totalAmount += product.price * quantity;
+        const div = document.createElement("div");
+        div.className = "flex justify-between p-4 h-64 w-full rounded shadow hover:border hover:border-purple-300";
 
-                div.innerHTML = `
+        div.innerHTML = `
                 <div>
         <h2 class="text-lg font-bold">${product.name}</h2>
         <p>Price: ₹${product.price}</p>
@@ -74,22 +74,22 @@
         <div class="image h-full w-xs"> <img class="h-full w-full" src=${product.image}>
             </div>
       `;
-                cartContainer.appendChild(div);
-            }
-        }
-        const total = document.createElement('div');
-        total.innerHTML = `
+        cartContainer.appendChild(div);
+      }
+    }
+    const total = document.createElement('div');
+    total.innerHTML = `
             <div>
              <h1>TOTAL AMOUNT : ${totalAmount}</h1>
              </div>
         `;
 
-        cartContainer.appendChild(total);
+    cartContainer.appendChild(total);
 
 
 
-    </script>
-    <script src="/cart.js" defer></script>
+  </script>
+  <script src="/cart.js" defer></script>
 
 
 
