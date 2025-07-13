@@ -76,6 +76,35 @@ A fully responsive, interactive product detail page built with **Node.js**, **Ex
 
 <h3>1. Clone the Repository</h3>
 
+```bash
+git clone https://github.com/raashi2120/project-4.git
+cd project-4
+
+```
+
+<h3>2. Install Dependencies</h3>
+
+```
+npm install
+```
+
+<h3>3. Compile Tailwind CSS</h3>
+
+```
+npx tailwindcss -i ./src/input.css -o ./public/output.css --watch
+```
+
+<h3>4. Run the Server</h3>
+
+```
+node index.js
+```
+
+<h3>5. Visit The Link Below </h3>
+
+```
+ http://localhost:3000
+```
 
 
 
