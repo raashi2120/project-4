@@ -28,7 +28,7 @@ A fully responsive, interactive product detail page built with **Node.js**, **Ex
 │   └── zoom.js
 ├── src
 │   ├── input.css
-│   └── output.css
+│   
 ├── tailwind.config.js
 └── views
     ├── cart.ejs
